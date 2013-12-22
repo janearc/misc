@@ -37,12 +37,12 @@ echo /Volumes/BACK-Sniffles/Backups.backupdb/haram/Latest/Macintosh\ HD/Users/al
 		* [Doing this right now instead. :(](http://puu.sh/5V6wt.png)
 
 * command line tool to paste to puu.sh or to push images
-	`$ puu.sh file.txt`
-	* returns uri
-	`$ puu.sh << EOF`
-	* creates a new (ostensibly hashish?) filename, pushes, returns uri
-	`$ puu.sh ls`
-	* shows 'galleries' on puu.sh such that one can find the uris for items in puu.sh
+	* `$ puu.sh file.txt`
+		* returns uri
+	* `$ puu.sh << EOF`
+		* creates a new (ostensibly hashish?) filename, pushes, returns uri
+	* `$ puu.sh ls`
+		* shows 'galleries' on puu.sh such that one can find the uris for items in puu.sh
 
 * a tmux config that connects to all the little remote processes in their own special windows
 	* separate windows for asuka, katsuragi, irssi, etc
