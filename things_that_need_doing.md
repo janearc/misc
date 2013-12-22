@@ -5,11 +5,7 @@
 * un-fuck cp/tar/ditto/etc on mavericks from time machine 
   * a command that can take a filename as argument and either create a copy of that file or create a directory without the 'chattr' flags that TM creates.
 		```dd if="`./olddir.sh`/Documents/Avriette, Jane (public).pdf" of=Documents/Avriette,_Jane_\(public\).pdf```
-	* where `olddir.sh` is
-```
-#!/bin/sh
-echo /Volumes/BACK-Sniffles/Backups.backupdb/haram/Latest/Macintosh\ HD/Users/alex/
-```
+	* where `olddir.sh` is `echo /Volumes/BACK-Sniffles/Backups.backupdb/haram/Latest/Macintosh\ HD/Users/alex/`
 	* ...but probably do this in perl as shell is breaky and macos likes to leave shitty chars/charsets hanging about.
 
 * mudra
