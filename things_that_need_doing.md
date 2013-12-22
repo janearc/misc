@@ -4,12 +4,12 @@
 
 * un-fuck cp/tar/ditto/etc on mavericks from time machine 
   * a command that can take a filename as argument and either create a copy of that file or create a directory without the 'chattr' flags that TM creates.
-		dd if="`./olddir.sh`/Documents/Avriette, Jane (public).pdf" of=Documents/Avriette,_Jane_\(public\).pdf
-	* where olddir.sh is
-		```bash
-		#!/bin/sh
-		echo /Volumes/BACK-Sniffles/Backups.backupdb/haram/Latest/Macintosh\ HD/Users/alex/
-		```
+		```dd if="`./olddir.sh`/Documents/Avriette, Jane (public).pdf" of=Documents/Avriette,_Jane_\(public\).pdf```
+	* where `olddir.sh` is
+```
+#!/bin/sh
+echo /Volumes/BACK-Sniffles/Backups.backupdb/haram/Latest/Macintosh\ HD/Users/alex/
+```
 	* ...but probably do this in perl as shell is breaky and macos likes to leave shitty chars/charsets hanging about.
 
 * mudra
@@ -34,7 +34,7 @@
 	* tmux
 	* emacs
 	* the idea here being it would hover around the edge or bottom of the screen, unobtrusive, like a minimized sticky and be e.g., 9pt or smaller monaco
-		* ![Doing this right now instead. :(](http://puu.sh/5V6wt.png)
+		* [Doing this right now instead. :(](http://puu.sh/5V6wt.png)
 
 * command line tool to paste to puu.sh or to push images
 	`$ puu.sh file.txt`
