@@ -2,11 +2,16 @@
 
 # nc_tripsit_ban_pastes.sh
 #  jane avriette, jane@cpan.org
+#  http://goo.gl/UMPoHO
 #
 # pull down all the ban_* factoids, check them for pastie/
 # pastebin/whatever urls, then gank those files as raw/text
 # for perusal
 
-AGENT=""
+AGENT="$0:[$$] banpasteaggregator - http://goo.gl/UMPoHO"
 
-curl "http://nourishedcloud.com:1337/quotes/"
+curl -A "${AGENT}" --compressed -L --no-keepalive \
+	--referer "http://nourishedcloud.com:1337/quoteremovals" \
+	--retry 6 --retry-delay 8 -S \
+	--url "http://nourishedcloud.com:1337/quotes/" | \
+		sed 's;<a href="/quotes/ban_;BANHERE=;g'
