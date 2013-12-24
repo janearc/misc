@@ -47,3 +47,6 @@
 
 * does facebook have an RSS feed or similar that i can pull those notifies from so that i don't have to keep a window open in chrome?
 	* easy enough to put this in tmux and/or irssi with encapsulator
+
+* an irc logs sanitizer -
+	* find each username in < >'s and replace with 'person a' and 'person b'
