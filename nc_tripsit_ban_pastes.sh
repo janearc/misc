@@ -10,8 +10,8 @@
 
 AGENT="$0:[$$] banpasteaggregator - http://goo.gl/UMPoHO"
 
-curl -A "${AGENT}" --compressed -L --no-keepalive \
+curl -s -A "${AGENT}" --compressed -L --no-keepalive \
 	--referer "http://nourishedcloud.com:1337/quoteremovals" \
 	--retry 6 --retry-delay 8 -S \
 	--url "http://nourishedcloud.com:1337/quotes/" | \
-		sed 's;<a href="/quotes/ban_;BANHERE=;g'
+		perl -ne 'print $1.qq/\n/ while m{(ban_[^/ ])[/ ]}' 
