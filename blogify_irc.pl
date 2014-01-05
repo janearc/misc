@@ -3,9 +3,10 @@
 use v5.18;
 use File::Slurp;
 
-foreach my $infile (@_) {
+foreach my $infile (@ARGV) {
 	my @chunks = read_file( $infile );
 	my @reconstituted = ( );
+	say "chunking $infile";
 	foreach my $chunk (@chunks) {
 
 # {{{
@@ -24,10 +25,15 @@ foreach my $infile (@_) {
 
 # }}}
 
-		if ($chunk =~ /\d\d:\d\d alice:/) {
-			# pink
+		if ($chunk =~ /\d\d:\d\d <\s?dram[^>]+>/) {
+			# This is alice
+			$chunk =~ s/<\s?dram[^>]+>/alice: /;
+			# make it pink
 			$chunk = q{<span style="color: #c27ba0">} . $chunk . q{</span><br />};
+		}
 		elsif ($chunk =~ /\d\d:\d\d bob:/) {
+			# This is bob
+			$chunk =~ s/<\s?reali[^>]+>/bob: /;
 			$chunk = q{<span style="color: #6fa8dc">} . $chunk . q{</span><br />};
 		}
 		else {
@@ -38,6 +44,8 @@ foreach my $infile (@_) {
 
 	unshift @reconstituted, q{<div style="background-color: #444444;">}.qq{\n};
 	push @reconstituted, q{</div>}.qq{\n};
+
+	say "spewing chunks into ${infile}.html";
 
 	write_file( $infile.".html", @reconstituted );
 }
