@@ -27,13 +27,13 @@ foreach my $infile (@ARGV) {
 
 		if ($chunk =~ /\d\d:\d\d <\s?dram[^>]+>/) {
 			# This is alice
-			$chunk =~ s/<\s?dram[^>]+>/alice: /;
+			$chunk =~ s/<dram[^>]+>/alice:/;
 			# make it pink
 			$chunk = q{<span style="color: #c27ba0">} . $chunk . q{</span><br />};
 		}
-		elsif ($chunk =~ /\d\d:\d\d bob:/) {
+		elsif ($chunk =~ /\d\d:\d\d <\s?reali[^>]+>/) {
 			# This is bob
-			$chunk =~ s/<\s?reali[^>]+>/bob: /;
+			$chunk =~ s/<\s?reali[^>]+>/bob:/;
 			$chunk = q{<span style="color: #6fa8dc">} . $chunk . q{</span><br />};
 		}
 		else {
