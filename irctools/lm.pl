@@ -10,6 +10,9 @@
     *point* to the metrics, in handy chart, showing that he *was* talking to
     me less.
 
+    See:
+    https://twitter.com/janeavr/status/397536815545987072
+
     Note: This worked with my irssi(1) logs. It may not work with yours, and
     it's not real smart. Also, this is not an especially great indicator of
     whether someone is an asshole, or even really talking to you. But it's a
