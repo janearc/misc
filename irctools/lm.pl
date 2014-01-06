@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+use v5.18;
+
 =cut
 
     So I once had this relationship with an ISTJ. It was, well, to quote his 
@@ -30,6 +32,7 @@ use File::Slurp qw{ read_file };
 # if (($year,$month,$day) = Decode_Date_US($string[,$lang])
 # $doy = Day_of_Year($year,$month,$day);
 
+# {{{
 =cut
 
 --- Log opened Mon Aug 05 23:32:20 2013
@@ -44,9 +47,13 @@ use File::Slurp qw{ read_file };
 23:34 <dramallama> well at this point it's silly to add more protection
 
 =cut
+# }}}
+
+# {{{
 
 my $doy;
 my %days;
+my %reverse_lookup;
 
 my %mlookup = qw{
 	Jan 1 Feb 2 Mar 3 Apr 4 May 5
@@ -59,6 +66,8 @@ my %dlookup = qw{
 	Thu 4 Fri 5 Sat 6 
 };
 
+# }}}
+
 for my $logfile (@ARGV) {
 	my @loglines = read_file( $logfile );
 	warn "reading logfile $logfile\n";
@@ -70,6 +79,7 @@ for my $logfile (@ARGV) {
 			# Wed Sep 11 2013
 			my ($dow, $m, $dom, $y) = split ' ', $date;
 			$doy = Day_of_Year( $y, $mlookup{ $m }, $dom );
+			$reverse_lookup{$doy} = $date;
 			next LINE;
 		}
 		next LINE unless $doy;
@@ -77,8 +87,17 @@ for my $logfile (@ARGV) {
 	}
 }
 
+my $count; $count += $_ for values %days;
+my $avg = $count / scalar keys %days;
+
 foreach my $key (sort { $a <=> $b } keys %days) {
-	print "$key,".$days{$key}."\n";
+	my $prepend;
+	if ( ($days{$key} > 2 * $avg) ) {
+		# date above from inside LINE:
+		$prepend = $reverse_lookup{$key};
+	}
+	$prepend .= ",";
+	say $prepend."$key,".$days{$key};
 }
 
 # jane@cpan.org // vim:tw=80:ts=2:noet
