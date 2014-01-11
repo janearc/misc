@@ -46,4 +46,16 @@ And the other, at somewhat more aggressive or twitchy:
       buyTreshold: 0.20
     };  
 
-I ran both these processes from [3 Jan through 10 Jan](http://bitcoincharts.com/charts/mtgoxUSD#rg60zczsg2014-01-03zeg2014-01-10ztgSzm1g10zm2g25zv), where there was certainly substantial volatility – an almost 200-dollar, 18.2% swing – and both processes “lost” simulated money. The more aggressive process lost 4.52% over the week, and the less aggressive process lost 7.19%. 
+I ran both these processes from [3 Jan through 10 Jan](http://bitcoincharts.com/charts/mtgoxUSD#rg60zczsg2014-01-03zeg2014-01-10ztgSzm1g10zm2g25zv), where there was certainly substantial volatility – an almost 200-dollar, 18.2% swing – and both processes “lost” simulated money. The more aggressive process lost 4.52% over the week, and the less aggressive process lost 7.19%. Kind of disappointing.
+
+So [Mike](http://mikevanrossum.nl/), the developer of Gekko, agreed with me on the nominal use case of Gekko as it stands. It is helpful to share an anecdote:
+
+I had just put a thousand more dollars (doubling my investment, and having “convinced” my spouse this was A Good Idea) into my Coinbase account. I wound up having a tough time sleeping that night, for reasons unrelated to Bitcoin. So I found myself awake at 0830 UTC or so, writing down some thoughts on why I was unhappy. As I sat, bleary-eyed, staring at my editor, the little [bitcoin monitor](http://codestream.de/bitcoin-monitor.html) I use to sort of passively watch the market had turned an angry red color, and seemed to be down in the mid-500’s. *That’s strange,* I thought, *I am pretty sure I remember it being up above 800 when I went to bed…* And so I put down my editor, and looked at my Coinbase account, and sure enough, I’d taken an enormous hit while I was asleep.
+
+China, as it happened, had a rough night in Bitcoin-land.
+
+I wound up staying up past sunrise to see it through, tightened my belt a little, and put another $750 in, confident that the market was healthy and would rebound, bought in the low $500’s, and managed to mitigate the loss by hang a quick profit on the $750 purchase.
+
+But this thought disturbed me – I cannot be awake around the clock to be there when China <del>shits the bed</del> <del>[shuts down](http://www.telegraph.co.uk/finance/currency/10558945/Chinas-answer-to-Amazon-Alibaba-bans-Bitcoin.html)</del> [*regulates* the market](http://techcrunch.com/2013/12/18/bitcoin-drops-50-overnight-as-chinas-biggest-btc-exchange-stops-deposits-in-chinese-yuan/).
+
+Mike agrees. *”Gekko is not a money-making machine,”* he says. Gekko is only able to analyze trends, and only then using the very simplistic method of using EMA. *”A lot of people spend hours and evenings on [discovering the best settings](https://bitcointalk.org/index.php?topic=60501.msg3918750#msg3918750).”* This is to say, Gekko is probably good to be that process that makes a hurried trade when China or some other regulatory body steps in and breaks things, preventing me from losing 50% of my investment while I sleep. But it is not guaranteed to do this. *”…you'd be surprised how many complaint email I get from people telling me they lost money. I want to make it really clear that if you don't understand what EMA is and you never backtested / paper tested it [what I am doing now] you really should not let Gekko play with all your money.”*
