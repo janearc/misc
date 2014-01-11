@@ -54,7 +54,7 @@ I had just put a thousand more dollars (doubling my investment, and having “co
 
 China, as it happened, had a rough night in Bitcoin-land.
 
-I wound up staying up past sunrise to see it through, tightened my belt a little, and put another $750 in, confident that the market was healthy and would rebound, bought in the low $500’s, and managed to mitigate the loss by hang a quick profit on the $750 purchase.
+I wound up staying up past sunrise to see it through, tightened my belt a little, and put another $750 in, confident that the market was healthy and would rebound, bought in the low $500’s, and managed to mitigate the loss by with a quick profit on the $750 purchase.
 
 But this thought disturbed me – I cannot be awake around the clock to be there when China <del>shits the bed</del> <del>[shuts down](http://www.telegraph.co.uk/finance/currency/10558945/Chinas-answer-to-Amazon-Alibaba-bans-Bitcoin.html)</del> [*regulates* the market](http://techcrunch.com/2013/12/18/bitcoin-drops-50-overnight-as-chinas-biggest-btc-exchange-stops-deposits-in-chinese-yuan/).
 
