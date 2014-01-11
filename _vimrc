@@ -97,6 +97,15 @@ set directory=~/.vim/tmp
 " typos 
 cabbrev zsg zsh
 cabbrev bim vim
+cabbrev pate paste
+
+" user paradigm on freenode suggested this from the help:
+map <F10> :set paste<CR>
+map <F11> :set nopaste<CR>
+imap <F10> <C-O>:set paste<CR>
+imap <F11> <nop>
+set pastetoggle=<F11>
+
 
 " i have more spelling typos in a specific file (english, vs code)
 " source! "~/.vim/spelling.vim"
