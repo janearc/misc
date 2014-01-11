@@ -8,7 +8,7 @@ This struck me as an admirable goal: seek 1-2 percent volatility per day, aim to
 
 I started, then, looking for “bitcoin trading bots” on Google, and the very first hit was [Gekko](https://github.com/askmike/gekko).
 
-<img src=“https://github.com/avriette/misc/blob/master/a_week_with_gekko/gekko_console.png?raw=true” alt=“The console display for Gekko” height=“400” width=“400”>
+![Console interface for Gekko](https://github.com/avriette/misc/blob/master/a_week_with_gekko/gekko_console.png?raw=true)
 
 Gekko is a [nodejs](http://nodejs.org/about/) (I like node. A lot.) program that uses the [exponential moving averages](https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average) for bitcoin to estimate trends and make trades. The author, Mike, tells me he was inspired to write Gekko after coming across [this post](https://bitcointalk.org/index.php?topic=60501.0) on the ever popular [bitcointalk](https://bitcointalk.org/index.php) forum. To be honest, I don’t really understand what EMAs are, mathematically. What struck me about the method, though, is it aims to buy or sell based upon a trend. That is, the software aims to fully divest before a downward trend becomes “too downward to hold,” and to (fully) invest when an upward trend is spotted (and we are not presently holding). This sounds great, right?
 
