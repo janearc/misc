@@ -3,6 +3,7 @@
 export AWS_DEFAULT_REGION=us-east-1
 export AWS_AVAILABILITY_ZONE=us-east-1d
 export AMAZON_DERP_DELAY=15
+export UBUNTU_DERP_DELAY=60
 DEBUG=1
 SSH_KEY=~/.ssh/id_rsa
 
@@ -60,6 +61,8 @@ aws ec2 run-instances \
 		sleep $AMAZON_DERP_DELAY
 		log "pulling public dns info from instance id ${instance_id}"
 		aws ec2 describe-instances --instance-ids $instance_id | grep PublicDnsName | awk '{ print $2 }' | cut -d \" -f 2 | while read public_hostname ; do
+			log "sleeping ${UBUNTU_DERP_DELAY}s to let ubuntu settle a bit"
+			sleep $UBUNTU_DERP_DELAY
 			log "shelling into ${public_hostname} to frob, chmod, and execute"
 			THIS_SSH="ssh -ti $SSH_KEY -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
 			$THIS_SSH ubuntu@${public_hostname} 'curl https://s3.amazonaws.com/optoro-corp/opsrsrc/optoro | sudo dd of=/usr/local/bin/optoro'
