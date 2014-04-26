@@ -31,7 +31,9 @@ aws ec2 describe-images --image-ids $UBUNTU_LTS_AMI_ID
 #  https://s3.amazonaws.com/optoro-corp/opsrsrc/id_rsa.pub
 # for 'ubuntu' user
 
+## Task 3
 # launch an m1.small instance
+aws opsworks create-instance --ami-id $UBUNTU_LTS_AMI_ID
 
 # install this file:
 #   https://s3.amazonaws.com/optoro-corp/opsrsrc/optoro
