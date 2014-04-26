@@ -50,20 +50,22 @@ aws ec2 run-instances \
 	--image-id ami-358c955c \
 	--key-name jane_key \
 	--instance-type m1.small \
-	--security-groups optoro_ssh_22_inbound
-
-# aws ec2 describe-instances --instance-ids i-6ff93d3f
-
-# install this file:
-#   https://s3.amazonaws.com/optoro-corp/opsrsrc/optoro
-# into /usr/local/bin/optoro
-
-# execute that file
+	--security-groups optoro_ssh_22_inbound | grep InstanceId | cut -d' ' -f 2 | cut -d, -f 1 | while read instance_id ; do
+		log "pulling public dns info from instance id ${instance_id}"
+		aws ec2 describe-instances --instance-ids $instance_id | grep PublicDnsName | cut -d' ' -f 2 | cut -d, -f 1 | while read public_hostname ; do
+			log "shelling into ${public_hostname} to frob"
+			ssh -i $SSH_KEY ubuntu@${public_hostname} 'curl https://s3.amazonaws.com/optoro-corp/opsrsrc/optoro | sudo dd of=/usr/local/bin/optoro'
+			ssh -i $SSH_KEY ubuntu@${public_hostname} 'sudo chmod 755 /usr/local/bin/optoro'
+			# we assume this is safe to run as root. seems kinda necessary, right?
+			ssh -i $SSH_KEY ubuntu@${public_hostname} 'sudo /usr/local/bin/optoro'
+		done # public_hostname
+	done # instance_id
 
 
 ### END
 ##
 #
+# log https://www.youtube.com/watch?v=gBzJGckMYO4
 exit 0;
 
 # This is basically just a multiline comment.
