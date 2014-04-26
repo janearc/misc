@@ -8,9 +8,11 @@ SSH_KEY=~/.ssh/id_rsa
 
 # Debugging utility
 log () {
+	# If this annoys, just swap this to logger(1)
 	[[ $DEBUG ]] && print_stderr $*
 }
 print_stderr () {
+	# works on the darwins and linuxes. not sure about the other bsds or solaris.
 	echo $0[$$]: $* > /dev/stderr
 }
 
@@ -59,7 +61,7 @@ aws ec2 run-instances \
 		log "pulling public dns info from instance id ${instance_id}"
 		aws ec2 describe-instances --instance-ids $instance_id | grep PublicDnsName | awk '{ print $2 }' | cut -d \" -f 2 | while read public_hostname ; do
 			log "shelling into ${public_hostname} to frob, chmod, and execute"
-			THIS_SSH="ssh -i $SSH_KEY -o 'StrictHostKeyChecking no' -o 'UserKnownHostsFile /dev/null'"
+			THIS_SSH="ssh -ti $SSH_KEY -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
 			$THIS_SSH ubuntu@${public_hostname} 'curl https://s3.amazonaws.com/optoro-corp/opsrsrc/optoro | sudo dd of=/usr/local/bin/optoro'
 			$THIS_SSH ubuntu@${public_hostname} 'sudo chmod 755 /usr/local/bin/optoro'
 			# we assume this is safe to run as root. seems kinda necessary, right?
