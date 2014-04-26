@@ -12,7 +12,7 @@ print_stderr () {
 	echo warn $0[$$] \"$*\" | perl
 }
 
-set -x
+# set -x
 
 ## Task 1
 # determine latest ubuntu lts ami id
@@ -24,23 +24,35 @@ set -x
 #  programmatically possible to 'ascertain' the latest-n-greatest e.g., ubuntu
 #  LTS image. So we hard-code this here.
 UBUNTU_LTS_AMI_ID="ami-358c955c" # note this is 32-bit
-# aws ec2 describe-images --image-ids $UBUNTU_LTS_AMI_ID
-
-
-## Task 2
-# use public key from:
-#  https://s3.amazonaws.com/optoro-corp/opsrsrc/id_rsa.pub
-# for 'ubuntu' user
 
 ## Task 3
 # launch an m1.small instance
-aws opsworks create-instance \
-	--ami-id $UBUNTU_LTS_AMI_ID \
-	--availability-zone $AWS_AVAILABILITY_ZONE \
-	--install-updates-on-boot true \
+
+log "creating keypair"
+aws ec2 import-key-pair \
+	--key-name jane_key \
+	--public-key-material "$(cat ~/.ssh/id_dsa.pub)"
+
+log "creating security group"
+aws ec2 create-security-group \
+	--group-name optoro_ssh_22_inbound \
+	--description "port 22 inbound is open"
+
+log "creating security group port 22 inbound rule"
+aws ec2 authorize-security-group-ingress \
+	--group-name optoro_ssh_22_inbound \
+	--protocol tcp \
+	--port 22 \
+	--cidr 173.8.15.238/32  # that's home
+
+log "spinning up new instance"
+aws ec2 run-instances \
+	--image-id ami-358c955c \
+	--key-name jane_key \
 	--instance-type m1.small \
-	--stack-id jane_stack \
-	--ssh-key-name ubuntu-optoro-jane.pem
+	--security-groups optoro_ssh_22_inbound
+
+# aws ec2 describe-instances --instance-ids i-6ff93d3f
 
 # install this file:
 #   https://s3.amazonaws.com/optoro-corp/opsrsrc/optoro
