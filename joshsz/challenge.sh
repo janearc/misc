@@ -9,7 +9,7 @@ log () {
 	[[ $DEBUG ]] && print_stderr $*
 }
 print_stderr () {
-	echo warn $0[$$] \"$*\" | perl
+	echo $0[$$]: $* > /dev/stderr
 }
 
 # set -x
@@ -31,7 +31,7 @@ UBUNTU_LTS_AMI_ID="ami-358c955c" # note this is 32-bit
 log "creating keypair"
 aws ec2 import-key-pair \
 	--key-name jane_key \
-	--public-key-material "$(cat ~/.ssh/id_dsa.pub)"
+	--public-key-material "$(cat ~/.ssh/id_rsa.pub)"
 
 log "creating security group"
 aws ec2 create-security-group \
