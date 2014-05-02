@@ -61,7 +61,7 @@ aws ec2 run-instances \
 	--image-id ami-358c955c \
 	--key-name ${MY_NAME}_key \
 	--instance-type m1.small \
-	--security-groups optoro_ssh_22_inbound | grep InstanceId | awk '{ print $2 }' | cut -d \" -f 2 | while read instance_id ; do
+	--security-groups ssh_22_inbound_irc_burner | grep InstanceId | awk '{ print $2 }' | cut -d \" -f 2 | while read instance_id ; do
 		log "sleeping ${AMAZON_DERP_DELAY}s to let amazon settle a bit"
 		sleep $AMAZON_DERP_DELAY
 		log "pulling public dns info from instance id ${instance_id} in $AWS_DEFAULT_REGION..."
