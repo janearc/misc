@@ -20,8 +20,8 @@ export MY_NAME=`whoami` # not portable to everywhere
 export MY_HOME=173.8.15.238
 export MY_MASK=32
 
-# You would change this to the location of your key (I only have the public
-# key, and have used my key so I can verify my work)
+# You would change this to the location of your key, but this seems pretty
+# reasonable for your average bear.
 SSH_KEY=~/.ssh/id_rsa
 
 # Debugging utility
