@@ -13,7 +13,7 @@ export NICK=$2
 # pick a region, any region
 export AWS_DEFAULT_REGION=$(perl -MList::Util=shuffle -e 'print pop @{ [ shuffle @ARGV ] }, qq/\n/' `aws ec2 describe-regions | grep RegionName | awk '{ print $2 }' | sed 's/"//g'`)
 export AMAZON_DERP_DELAY=15
-export UBUNTU_DERP_DELAY=60
+export UBUNTU_DERP_DELAY=30
 export MY_NAME=`whoami` # not portable to everywhere
 
 # You'd change these to reflect the subnet and mask you would use for you.
@@ -36,8 +36,7 @@ print_stderr () {
 
 # Shouldn't really be necessary.
 # set -x
-
-UBUNTU_LTS_AMI_ID="ami-358c955c" # note this is latestish ubuntu LTS 32-bit
+UBUNTU_LTS_AMI_ID=$(aws ec2 describe-images --filters "Name=name,Values=ubuntu/images/ebs/ubuntu-trusty-14.04-i386-server-20140416.1" | grep ImageId | awk '{ print $2 }' | sed 's/"//g' | cut -d, -f 1)
 
 log "creating keypair"
 aws ec2 import-key-pair \
@@ -56,11 +55,12 @@ aws ec2 authorize-security-group-ingress \
 	--port 22 \
 	--cidr ${MY_HOME}/${MY_MASK}
 
-log "spinning up new instance"
+log "spinning up new instance ($UBUNTU_LTS_AMI_ID, $AWS_DEFAULT_REGION)"
 aws ec2 run-instances \
-	--image-id ami-358c955c \
+	--image-id $UBUNTU_LTS_AMI_ID \
 	--key-name ${MY_NAME}_key \
-	--instance-type m1.small \
+	--instance-type t1.micro \
+	--region $AWS_DEFAULT_REGION \
 	--security-groups ssh_22_inbound_irc_burner | grep InstanceId | awk '{ print $2 }' | cut -d \" -f 2 | while read instance_id ; do
 		log "sleeping ${AMAZON_DERP_DELAY}s to let amazon settle a bit"
 		sleep $AMAZON_DERP_DELAY
@@ -72,7 +72,7 @@ aws ec2 run-instances \
 			THIS_SSH="ssh -ti $SSH_KEY -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
 			$THIS_SSH ubuntu@${public_hostname} 'sudo apt-get -y install irssi irssi-scripts vim-scripts'
 			log "shelling into ${public_hostname} to run irssi against $SERVER ($NICK)"
-			$THIS_SSH ubuntu@${public_hostname} "irssi -c ${SERVER} -n ${NICK}"
+			tmux -2uc "$THIS_SSH ubuntu@${public_hostname} \"irssi -c ${SERVER} -n ${NICK}\""
 		done # public_hostname
 		log "looks like instance-id ${instance_id} is done. cleaning up."
 		aws ec2 terminate-instances --instance-ids $instance_id
