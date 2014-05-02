@@ -13,7 +13,7 @@ export NICK=$2
 # pick a region, any region
 export AWS_DEFAULT_REGION=$(perl -MList::Util=shuffle -e 'print pop @{ [ shuffle @ARGV ] }, qq/\n/' `aws ec2 describe-regions | grep RegionName | awk '{ print $2 }' | sed 's/"//g'`)
 export AMAZON_DERP_DELAY=15
-export UBUNTU_DERP_DELAY=30
+export UBUNTU_DERP_DELAY=45
 export MY_NAME=`whoami` # not portable to everywhere
 
 # You'd change these to reflect the subnet and mask you would use for you.
@@ -36,6 +36,7 @@ print_stderr () {
 
 # Shouldn't really be necessary.
 # set -x
+# Find an ubuntu LTS image in the current region.
 UBUNTU_LTS_AMI_ID=$(aws ec2 describe-images --filters "Name=name,Values=ubuntu/images/ebs/ubuntu-trusty-14.04-i386-server-20140416.1" | grep ImageId | awk '{ print $2 }' | sed 's/"//g' | cut -d, -f 1)
 
 log "creating keypair"
@@ -68,14 +69,16 @@ aws ec2 run-instances \
 		aws ec2 describe-instances --instance-ids $instance_id | grep PublicDnsName | awk '{ print $2 }' | cut -d \" -f 2 | while read public_hostname ; do
 			log "sleeping ${UBUNTU_DERP_DELAY}s to let ubuntu settle a bit"
 			sleep $UBUNTU_DERP_DELAY
-			log "shelling into ${public_hostname} to install irssi & vim"
-			THIS_SSH="ssh -ti $SSH_KEY -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
-			$THIS_SSH ubuntu@${public_hostname} 'sudo apt-get -y install irssi irssi-scripts vim-scripts'
+			log "shelling into ${public_hostname} to install irssi"
+			THIS_SSH="ssh -tt -i $SSH_KEY -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+			$THIS_SSH ubuntu@${public_hostname} 'sudo apt-get -y install irssi'
 			log "shelling into ${public_hostname} to run irssi against $SERVER ($NICK)"
-			tmux -2uc "$THIS_SSH ubuntu@${public_hostname} \"irssi -c ${SERVER} -n ${NICK}\""
+			# oh, this is filthy. basically, we do this because of crappy tty-ness.
+			CHILD="$THIS_SSH ubuntu@${public_hostname} /usr/bin/irssi -c ${SERVER} -n ${NICK}; AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION aws ec2 terminate-instances --instance-ids $instance_id ; sleep 4; exit"
+			osascript -e "tell app \"Terminal\" to do script \"${CHILD}\""
 		done # public_hostname
-		log "looks like instance-id ${instance_id} is done. cleaning up."
-		aws ec2 terminate-instances --instance-ids $instance_id
+		log "just in case, you may want to issue this command when the new terminal goes away."
+		echo AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION aws ec2 terminate-instances --instance-ids $instance_id
 	done # instance_id
 
 ### END
