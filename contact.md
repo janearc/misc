@@ -6,7 +6,7 @@ voice mails, phone calls, and emails via that phone number.
 
 You may also email me at [jane@cpan.org](mailto:jane@cpan.org)  
 
-In order of preference, I prefer communication via email, sms, instant..
+In order of preference, I prefer communication via email, sms, instant  
 message, and lastly via phone or voice.  
 
 With respect to communication, as I live in the Eastern/New_York time  
