@@ -44,3 +44,9 @@
 
 * an irc logs sanitizer -
 	* find each username in < >'s and replace with 'person a' and 'person b'
+
+* i need a thingy to have a sort of shared clipboard between machines.
+    * `sharenote` -> opens up something on e.g., `stein` that i can do from anywhere.
+    * this file should be splatable or have a TTL for .. what, revisioning? "this thing you wrote here six days ago is being removed today"? something like this.
+    * should be available over http - e.g., http://stein.feminist.pw/sharenote/
+    * should probably also have some sort of REST or similar so that /sharenote/splat destroys and so forth
