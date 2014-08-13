@@ -2,6 +2,11 @@ export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export HISTFILESIZE=10000
 export HISTSIZE=10000
+
+# this dir needs to exist
+export GOPATH=${HOME}/go
+export PATH=${PATH}:${GOPATH}/bin
+
 # i keep a bunch of backups here, but it's a bigass path
 export OF="\"`${HOME}/olddir.sh`\""
 alias olddrive="pushd $OF; open $OF"
