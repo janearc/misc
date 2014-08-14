@@ -1,7 +1,6 @@
 #!/bin/bash
-TR="tr -d ',:\"'"
-GROUPS="`aws iam list-groups | grep GroupName | awk '{ print $2 }' | tr -d '"'`"
-echo $GROUPS
+GROUPS=`aws iam list-groups | grep GroupName | awk '{ print $2 }' | tr -d '"'`
+echo $GROUPS >> /dev/stderr
 for group in "$GROUPS"; do
 	POLICIES="`aws iam list-group-policies --group-name $group | grep -E '^        ' | $TR`"
 	for policy in $POLICIES; do
