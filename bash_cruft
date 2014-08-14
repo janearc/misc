@@ -7,6 +7,10 @@ export HISTSIZE=10000
 export GOPATH=${HOME}/go
 export PATH=${PATH}:${GOPATH}/bin
 
+# aws sdk node
+export AWS_ACCESS_KEY_ID=`grep s_access_key ~/.aws/config | cut -d' ' -f 3`
+export AWS_SECRET_ACCESS_KEY=`grep aws_sec ~/.aws/config | cut -d' ' -f 3`
+
 # i keep a bunch of backups here, but it's a bigass path
 export OF="\"`${HOME}/olddir.sh`\""
 alias olddrive="pushd $OF; open $OF"
