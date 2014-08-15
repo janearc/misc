@@ -37,26 +37,46 @@ iam.listGroups( params, function( err, groups ) {
 				    ]
 				}
 			*/
-			for (policy in policies) {
-				// and then we need to ask it to
-				//     aws iam get-group-policy --policy-name beeboop --group-name blarp
-				// http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getGroupPolicy-property
-				/* 
-					{
-					    "GroupName": "NNNN", 
-					    "PolicyDocument": {
-					        "Version": "2012-10-17", 
-					        "Statement": [
-					            {
-					                "NotAction": "iam:*", 
-					                "Resource": "*", 
-					                "Effect": "Allow"
-					            }
-					        ]
-					    }, 
-					    "PolicyName": "NNNN"
-					}
-				*/
-			} // policies
+			// without additional limits (marker, maxitems), this is just going to ask for 
+			// all the things.
+			var params = {
+				GroupName = groups.name
+			};
+			iam.listGroupPolicies(params, function( err, policies ) {
+				if (err) console.log(err, err.stack); // oops
+				else {
+					// success!
+					for (policy in policies) {
+						// and then we need to ask it to
+						//     aws iam get-group-policy --policy-name beeboop --group-name blarp
+						// http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getGroupPolicy-property
+						/* 
+							{
+							    "GroupName": "NNNN", 
+							    "PolicyDocument": {
+							        "Version": "2012-10-17", 
+							        "Statement": [
+							            {
+							                "NotAction": "iam:*", 
+							                "Resource": "*", 
+							                "Effect": "Allow"
+							            }
+							        ]
+							    }, 
+							    "PolicyName": "NNNN"
+							}
+						*/
+						var params = {
+							GroupName = thisname,    // define new iterators
+							policyname = thispolicy  // define new iterators, see line 49
+						};
+						iam.getGroupPolicy( params, function( err, policies ) {
+						
+						} ); // getGroupPolicy (groups, policies)
+
+					} // policies
+				}
+			} );
+
 		} // groups
 } );
