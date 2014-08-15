@@ -25,6 +25,7 @@ iam.listGroups( params, function( err, groups ) {
 		for (group in groups) {
 			// at this point we ask it to 
 			//     aws iam list-group-policies --group-name
+			// http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listGroupPolicies-property
 			// which should return to us:
 			/*
 				{
@@ -39,6 +40,7 @@ iam.listGroups( params, function( err, groups ) {
 			for (policy in policies) {
 				// and then we need to ask it to
 				//     aws iam get-group-policy --policy-name beeboop --group-name blarp
+				// http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getGroupPolicy-property
 				/* 
 					{
 					    "GroupName": "NNNN", 
@@ -55,6 +57,6 @@ iam.listGroups( params, function( err, groups ) {
 					    "PolicyName": "NNNN"
 					}
 				*/
-			}
-		} 
+			} // policies
+		} // groups
 } );
