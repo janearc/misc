@@ -29,13 +29,32 @@ iam.listGroups( params, function( err, groups ) {
 			/*
 				{
 				    "PolicyNames": [
-				        "StelligentAllowCreatePolicies", 
-				        "StelligentAllowReadPolicies", 
-				        "StelligentAllowWritePolicies", 
-				        "StelligentDenyPolicies"
+				        "NNNNNNNN", 
+				        "NNNNNNNN", 
+				        "NNNNNNNN", 
+				        "NNNNNNNN"
 				    ]
 				}
 			*/
-
-	} 
+			for (policy in policies) {
+				// and then we need to ask it to
+				//     aws iam get-group-policy --policy-name beeboop --group-name blarp
+				/* 
+					{
+					    "GroupName": "NNNN", 
+					    "PolicyDocument": {
+					        "Version": "2012-10-17", 
+					        "Statement": [
+					            {
+					                "NotAction": "iam:*", 
+					                "Resource": "*", 
+					                "Effect": "Allow"
+					            }
+					        ]
+					    }, 
+					    "PolicyName": "NNNN"
+					}
+				*/
+			}
+		} 
 } );
