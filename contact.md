@@ -14,7 +14,8 @@ zone, you can expect me to be paying attention to communications between
 roughly **9am and 6pm** my own time.
 
 * irc: [freenode](http://www.freenode.net/) or <a href="http://www.efnet.org/?module=servers">efnet</a>, authenticated (usually) as <i>jadne</i></li>
-* twitter: [janeavr](https://twitter.com/janeavr)
+* blogger: [deepthoughts.feminist.pw](http://deepthoughts.feminist.pw/)
+* twitter: [avriette](https://twitter.com/avriette)
 * github: [avriette](https://github.com/avriette)
 * cpan: [jane](http://search.cpan.org/~jane/)
 * facebook: [jane.avriette.7](https://www.facebook.com/jane.avriette.7)
@@ -23,6 +24,6 @@ roughly **9am and 6pm** my own time.
 * last.fm: [avriette](http://www.last.fm/user/avriette)
 * stack exchange: [jane avriette](https://stackexchange.com/users/3475447/jane-avriette?tab=accounts)
 * jabber: janeavr@dukgo.com [I appreciate OTR, thanks]</li>
-* gnupg/pgp: [0x3166AA514B8EF964](http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x3166AA514B8EF964) 
+* gnupg/pgp: [0x3166AA514B8EF964](http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x3166AA514B8EF964) [see also](https://github.com/avriette/misc/tree/master/gnupg_pubkeys)
 
 lovingly crafted in vi [7.4 (2013 Aug 10, compiled Mar 11 2014 11:53:33)]
