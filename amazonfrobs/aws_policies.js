@@ -42,7 +42,8 @@ iam.listGroups( ls_group_params, function( err, groups ) {
 						iam.getGroupPolicy( enumerate_policy_params, function( err, policydata ) {
 							// So the return here is a uri-encoded string. If we unescape() this, we get [object Object]. Okay, then.
 							data = unescape( policydata );
-							console.log( "the object: " + data );
+							decoded_data = decodeURIComponent( policydata );
+							console.log( "the object: " + decoded_data );
 							this_group  = data.GroupName;
 							this_policy = data.PolicyName;
 							this_doc    = data.PolicyDocument;
