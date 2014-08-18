@@ -22,7 +22,7 @@ iam.listGroups( params, function( err, groups ) {
 	
 		*/	
 
-		for (group in groups) {
+		for (groupnum in groups.Groups) {
 			// at this point we ask it to 
 			//     aws iam list-group-policies --group-name
 			// http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#listGroupPolicies-property
@@ -40,8 +40,10 @@ iam.listGroups( params, function( err, groups ) {
 			// without additional limits (marker, maxitems), this is just going to ask for 
 			// all the things.
 			var params = {
-				GroupName: group.name
+				GroupName: groups.Groups[groupnum].GroupName
 			};
+			// console.log( group );
+			// console.log("frobbing " + groups.Groups[groupnum]);
 			iam.listGroupPolicies(params, function( err, policies ) {
 				if (err) console.log(err, err.stack); // oops
 				else {
@@ -67,11 +69,11 @@ iam.listGroups( params, function( err, groups ) {
 							}
 						*/
 						var params = {
-							GroupName: thisname,    // define new iterators
-							policyname: thispolicy  // define new iterators, see line 49
+							GroupName: groups.Groups[groupnum].GroupName,    // define new iterators
+							PolicyName: policy.name  // define new iterators, see line 49
 						};
 						iam.getGroupPolicy( params, function( err, policies ) {
-						
+							console.log(policies);
 						} ); // getGroupPolicy (groups, policies)
 
 					} // policies
