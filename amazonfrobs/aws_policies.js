@@ -47,33 +47,24 @@ iam.listGroups( params, function( err, groups ) {
 			iam.listGroupPolicies(params, function( err, policies ) {
 				if (err) console.log(err, err.stack); // oops
 				else {
-					// success!
-					for (policy in policies) {
+					for (thispolicyname in policies.PolicyNames) {
 						// and then we need to ask it to
 						//     aws iam get-group-policy --policy-name beeboop --group-name blarp
 						// http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#getGroupPolicy-property
-						/* 
-							{
-							    "GroupName": "NNNN", 
-							    "PolicyDocument": {
-							        "Version": "2012-10-17", 
-							        "Statement": [
-							            {
-							                "NotAction": "iam:*", 
-							                "Resource": "*", 
-							                "Effect": "Allow"
-							            }
-							        ]
-							    }, 
-							    "PolicyName": "NNNN"
-							}
-						*/
+						//
+						// so elsewhere the data returned is a dictionary or an array. but what they give
+						// us from listGroupPolicies is an object, which has methods: PolicyNames IsTruncated Marker
+						// because amazon loves us so.
+						//
+						console.log( "oh look at dis " + policies.PolicyNames );
 						var params = {
-							GroupName: groups.Groups[groupnum].GroupName,    // define new iterators
-							PolicyName: policy.name  // define new iterators, see line 49
+							GroupName: groups.Groups[groupnum].GroupName
+							// GroupName: groups.Groups[groupnum].GroupName,
+							// PolicyName: policies[policynum].PolicyName
 						};
-						iam.getGroupPolicy( params, function( err, policies ) {
-							console.log(policies);
+						console.log( params );
+						iam.getGroupPolicy( params, function( err, thesepolicies ) {
+							// console.log(thesepolicies); // XXX: this is null. probably we need to check where we get this value.
 						} ); // getGroupPolicy (groups, policies)
 
 					} // policies
