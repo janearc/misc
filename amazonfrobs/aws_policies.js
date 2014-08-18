@@ -40,7 +40,7 @@ iam.listGroups( params, function( err, groups ) {
 			// without additional limits (marker, maxitems), this is just going to ask for 
 			// all the things.
 			var params = {
-				GroupName = groups.name
+				GroupName: group.name
 			};
 			iam.listGroupPolicies(params, function( err, policies ) {
 				if (err) console.log(err, err.stack); // oops
@@ -67,8 +67,8 @@ iam.listGroups( params, function( err, groups ) {
 							}
 						*/
 						var params = {
-							GroupName = thisname,    // define new iterators
-							policyname = thispolicy  // define new iterators, see line 49
+							GroupName: thisname,    // define new iterators
+							policyname: thispolicy  // define new iterators, see line 49
 						};
 						iam.getGroupPolicy( params, function( err, policies ) {
 						
@@ -79,4 +79,5 @@ iam.listGroups( params, function( err, groups ) {
 			} );
 
 		} // groups
+	}
 } );
