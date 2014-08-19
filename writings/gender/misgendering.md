@@ -241,8 +241,8 @@ and a skirt and cat-eye spectacles and pumps, there is exactly zero chance that
 I want to be called "sir," or "him," or "he," even if I am 2 meters tall. Even
 if my voice is deeper than you'd expect. Even if you, in your miraculous
 ability to perceive my *"true identity"*, have discerned that I am in fact some
-kind of very confused man, *you still need to call me ma'am, she, her, and so
-on. Because I am a woman. Because you owe it to everyone to treat people with
+kind of very confused man, *you still need to call me ma'am, she, her, and so on.*
+Because I am a woman. Because you owe it to everyone to treat people with
 decency. Because I treat you with decency, and I use the pronouns appropriate
 for you.
 
