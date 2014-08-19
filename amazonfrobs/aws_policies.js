@@ -40,19 +40,24 @@ iam.listGroups( ls_group_params, function( err, groups ) {
 							PolicyName: policies.PolicyNames[policynameindex]
 						};
 						iam.getGroupPolicy( enumerate_policy_params, function( err, policydata ) {
-							// So the return here is a uri-encoded string. If we unescape() this, we get [object Object]. Okay, then.
-							data = unescape( policydata );
-							decoded_data = decodeURIComponent( policydata );
-							console.log( "the object: " + decoded_data );
-							this_group  = data.GroupName;
-							this_policy = data.PolicyName;
-							this_doc    = data.PolicyDocument;
-							console.log( "request id: " + data.ResponseMetadata );
-							console.log( "group name: " + this_group );
-							console.log( "policy name: " + this_policy );
-							console.log( "- - -" );
-							console.log( this_doc );
-							console.log( "- - -" );
+							if (policydata) {
+								var the_policy ;
+								// So the return here is a uri-encoded string. If we unescape() this, we get [object Object]. Okay, then.
+								the_policy  = decodeURIComponent( policydata.PolicyDocument ) ;
+								this_group  = policydata.GroupName;
+								this_policy = policydata.PolicyName;
+
+								console.log( "request id: " + policydata.ResponseMetadata );
+								console.log( "group name: " + this_group );
+								console.log( "policy name: " + this_policy );
+								console.log( "- - -" );
+								console.log( the_policy );
+								console.log( "- - -" );
+							}
+							else {
+								// boo hoo
+								console.log( "null policy document returned. next." )
+							} // else policydoc isn't true
 						} ); // getGroupPolicy (group name, policy name)
 					} // policy index iterator (for)
 				} // else
