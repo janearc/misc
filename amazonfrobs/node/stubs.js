@@ -16,7 +16,7 @@
 {
 	username:     "this is a string name, so Jane A Doe", // pull this from aws?
 	iam_id:       "this would be the arn for this user",  // pulled from aws iam
-	affil:        "a reference to a customer.customerid unique identifier",
+	group_id:      "a reference to a customer.customerid unique identifier",
 	// note: from the aws iam arn, we can pull the policy out of iam
 }
 
@@ -26,4 +26,10 @@
 	aws_attribs:   "a pointer to the aws object for purposes of attrib accessors", // object
 	gh_project:    "a pointer to the github project object", // object
 	// note the aws ec2 arn &c can be pulled from aws, the gh attribs from gh
+}
+
+// 18f gh project object description
+{
+	group_id:      "a reference to a customer.customerid unique identifier",
+	gh_object:     "a reference to the github object",
 }
