@@ -14,7 +14,11 @@ export AWS_SECRET_ACCESS_KEY=`grep aws_sec ~/.aws/config | cut -d' ' -f 3`
 //
 
 // Load the AWS SDK for Node.js
+//
 var AWS = require('aws-sdk');
+
+// Correct this as necessary
+//
 AWS.config.region = 'us-east-1';
 
 var iam = new AWS.IAM();
@@ -27,6 +31,8 @@ var iam_call_params = {
 
 };
 
+// Link to the call name here for easy looking up
+// http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#an_anchor_goes_here
 iam.api_call_name( aws_iam_call_params, function( err, iam_call_name_results ) {
 	// This means we didn't get what we wanted back. We can't do much but complain and fail.
 	//
