@@ -26,7 +26,7 @@ var iam = new AWS.IAM();
 // iam offers us two params, username and path. username is required
 // because duh.
 var delete_user_params = { 
-	GroupName: 'jane_test_user'
+	UserName: 'jane_test_user'
 };
 
 // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/IAM.html#deleteUser-property
