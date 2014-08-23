@@ -57,7 +57,9 @@ That's pretty disgusting. That this person has gone through this process that is
 
 It is exactly equivalent to using an epithet to refer to someone's ethnic background. You know they don't want to be called that, but in your head, they *are* that, and you are referring to them as that *despite their wishing to be treated like a human.* The way *you* want to be treated.
 
-##### But it's a mistake / But it's just a word / Related counter-arguments One of the things I have heard most frequently about the use of pronouns, and of using former names (my name is Jane today. Calling me "Joe" because that was my name before is no more acceptable than calling me "him" or "sir") is that "but it's just a word," and "but it's an accident, and you're reacting so heinously!"
+##### But it's a mistake / But it's just a word / Related counter-arguments 
+
+One of the things I have heard most frequently about the use of pronouns, and of using former names (my name is Jane today. Calling me "Joe" because that was my name before is no more acceptable than calling me "him" or "sir") is that "but it's just a word," and "but it's an accident, and you're reacting so heinously!"
 
 Let's be very clear. Words are the substrate that we use to communicate information. That our identities - male, female, professions, ethnicity, adjectives like "dangerous," epithets, *all* words - are deeply significant and important. While it is just a word when it comes out of your mouth, the important thing is that this word refers to a meaning, and that meaning belies the way a person thinks about a thing.
 
@@ -83,7 +85,9 @@ Who can I expect you to tell this realisation you've had - that I am actually a 
 
 Do you see how quickly this becomes incredibly problematic for me, even if it is "a mistake" for you? That if it is just a syllable for you - "him" - that it is indeed incredibly significant for me?
 
-##### A last note on the perception of men-in-dresses and the like There is this pehnomenon of "drag." I am the first to admit that I do not know the first thing about drag. I never "cross-dressed" before transitioning, and of course, I am not "cross-dressing" today when I wear a dress.
+##### A last note on the perception of men-in-dresses and the like
+
+There is this pehnomenon of "drag." I am the first to admit that I do not know the first thing about drag. I never "cross-dressed" before transitioning, and of course, I am not "cross-dressing" today when I wear a dress.
 
 But I have heard it said that it is *so confusing* that there are "men in drag" such as [Priscilla, Queen of the Desert](http://d3rm69wky8vagu.cloudfront.net/photos/large/4.160374.jpg). There are a couple of points to make here. First, drag performers are almost all cisgender. That is, drag is in fact *performance* for them. For a transgender person, dressing in gender-appropriate clothing is *not* performance. It's going to work. Or out for a burger. Or going to bed.
 
