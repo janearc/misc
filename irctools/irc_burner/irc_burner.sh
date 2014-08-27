@@ -17,7 +17,7 @@ export UBUNTU_DERP_DELAY=45
 export MY_NAME=`whoami` # not portable to everywhere
 
 # You'd change these to reflect the subnet and mask you would use for you.
-export MY_HOME=173.8.15.238
+export MY_HOME=166.137.244.63
 export MY_MASK=32
 
 # You would change this to the location of your key, but this seems pretty
