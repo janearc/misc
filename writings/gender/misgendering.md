@@ -85,6 +85,12 @@ Who can I expect you to tell this realisation you've had - that I am actually a 
 
 Do you see how quickly this becomes incredibly problematic for me, even if it is "a mistake" for you? That if it is just a syllable for you - "him" - that it is indeed incredibly significant for me?
 
+And lastly, I hear from cis women, “But people accidentally call me sir all the time. It’s no big deal.” Well, of course it is not a big deal for a cisgender person. That isn’t how it works. There is no fear that they will be “uncovered” and “discovered to be something they’re not.” For a cis person, if they are misgendered, it does not actually mean that they might be [targeted for violence](http://www.glaad.org/blog/ncavp-report-2012-hate-violence-disproportionately-target-transgender-women-color).
+
+I get it. People make mistakes. Problematically, though, not everyone who misgenders a person is actually making a mistake; not everyone who misgenders a person is safe to be around; and no transgender person anywhere is going to feel safe around people who have an ongoing dialogue in their heads about the legitimacy of their personhood.
+
+This is a pretty fundamental right that cis people don’t even realise they have: you are accepted for being a person as you are without any effort whatever. You are accepted, carte blanche. It is simply not possible to explain to a person who is not trans or gender non-conforming what it is like to have that fundamental right taken from you. It just isn’t.
+
 ##### A last note on the perception of men-in-dresses and the like
 
 There is this pehnomenon of "drag." I am the first to admit that I do not know the first thing about drag. I never "cross-dressed" before transitioning, and of course, I am not "cross-dressing" today when I wear a dress.
