@@ -13,8 +13,6 @@ var ec2 = new AWS.EC2(
 	}
 );
 
-// This is just used to generate a noncely thing for nodename
-//
 var launch_params = {
 	KeyName                           : 'jane-fetch-aws-root',
 	ImageId                           : 'ami-020bc76a',
