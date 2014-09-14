@@ -1,4 +1,5 @@
-{ farms : [
+{ 	description : "list of farms in Elysium",
+	farms : [
 	{
 		name : "omega shin",
 		coords : [ 405, 453 ]
@@ -50,5 +51,17 @@
 	{
 		name : "etzel",
 		coords : [ 447, 437 ]
+	},
+	{
+		name: "fait",
+		coords : [ 538, 17 ]
+	},
+	{
+		name : "kyrooo",
+		coords : [ 18, 257 ]
+	},
+	{
+		name : "amrxzy",
+		coords : [ 394, 133 ]
 	}
 ] };
