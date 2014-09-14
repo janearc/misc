@@ -17,15 +17,15 @@ function doaUnit(attribs, cost) {
 	// TODO: just check the dict for valueness and unstupidness and then
 	// co-opt it rather than setting all the things.
 	//
-	this.attributes.unit_name = atttribs.unit_name;
-	this.attributes.life = atttribs.life;
-	this.attributes.range = atttribs.range;
-	this.attributes.load = atttribs.load;
-	this.attributes.defense = atttribs.defense;
-	this.attributes.speed = atttribs.speed;
-	this.attributes.upkeep = atttribs.upkeep;
-	this.attributes.ranged_attack = atttribs.ranged_attack;
-	this.attributes.melee_attack = atttribs.melee_attack;
+	this.attributes.unit_name = attribs.unit_name;
+	this.attributes.life = attribs.life;
+	this.attributes.range = attribs.range;
+	this.attributes.load = attribs.load;
+	this.attributes.defense = attribs.defense;
+	this.attributes.speed = attribs.speed;
+	this.attributes.upkeep = attribs.upkeep;
+	this.attributes.ranged_attack = attribs.ranged_attack;
+	this.attributes.melee_attack = attribs.melee_attack;
 
 	// same as above
 	//
