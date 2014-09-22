@@ -79,11 +79,13 @@ ab prnit print
 " perl macros i use
 ab ubp #!/usr/bin/perl
 ab u518 use v5.18;
-ab uws use warnings;use strict;
+ab uws use warnings;
+use strict;
 
 " like :wq except write and suspend
 command Wst w <bar> st
-cabbrev wst Wst 
+cabbrev wst Wst
+cabbrev wt st
 cabbrev Wq wq
 
 " i tag my files with my name, you should too
