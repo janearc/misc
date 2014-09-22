@@ -20,6 +20,7 @@ alias perl=/usr/local/Cellar/perl518/5.18.0/bin/perl5.18.0
 alias perldoc=/usr/local/Cellar/perl518/5.18.0/bin/perldoc
 alias j=jobs
 alias f=fg
+alias gh=fg
 alias HEAD="curl -LIq"
 alias encrypt=encrypt_backend
 alias decrypt=decrypt_backend
