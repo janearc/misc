@@ -10,7 +10,7 @@ Before coming to work for government, I had heard just about everywhere that “
 
 On the first day of my second week in the office (I’d spent the first week mostly figuring out what I needed to hack and then got down to actual hacking), I spent a very long time on the phone with our health plan providers. I threw out my notes from that day in disgust, but I spoke with Aetna, Blue Cross, Kaiser, and something called Blue Choice, which I thought was Blue-Cross-related but is evidently not really.
 
-Every single health plan provider I called gave me the same answer: “transition- and gender-related care are explicitly *not* covered by [their] plan.” I was prepared for this. In fact, I was prepared for this. I explained that [Washington DC has just passed legislation](http://www.advocate.com/politics/transgender/2014/02/27/dc-mayor-makes-major-move-expanding-trans-health-care) *ordering* district employers to provide transgender-specific healthcare, including all the vagaries therein.
+Every single health plan provider I called gave me the same answer: “transition- and gender-related care are explicitly *not* covered by [their] plan.” I was prepared for this. I explained that [Washington DC has just passed legislation](http://www.advocate.com/politics/transgender/2014/02/27/dc-mayor-makes-major-move-expanding-trans-health-care) *ordering* district employers to provide transgender-specific healthcare, including all the vagaries therein.
 
 I was positively *crushed* to hear, specifically the person from Aetna, tell me quite assertively, “well, the federal government is *not obligated* [emphasis hers] to follow that law.” Crushed, kind of shocked, and disappointed.
 
@@ -42,7 +42,7 @@ For people who want GCS (and understand that not every trans person *does* want 
 
 Does this sound expensive? I know a person who was hospitalised recently in the DC area for a little less than ten days for acute, intractable depression. This person’s hospital bill (submitted to insurance) was $19,000 and change. I know another person who was hospitalised for depression in 2010, and her bill was $27,000 for just a week.
 
-It is not uncommon at all for transgender people to be hospitalised for suicidal depression (which is not, actually, due to their ‘being transgender,’ but rather to *how people treat them* for being transgender). If these people are hospitalised for a suicide attempt, the acute care plus the psychiatric hospitalisation can run into the many tens of thousands of dollars.
+It is not uncommon at all for transgender people to be hospitalised for suicidal depression (which is not, actually, due to their ‘being transgender,’ but rather to *how people treat them* for being transgender). If these people are hospitalised for a suicide attempt, the acute care plus the psychiatric hospitalisation can run into the many tens of thousands of dollars. Some are hospitalised more than once. Some for much longer than a week or ten days.
 
 Really, surgery starts to look cheap if you decide to “only” provide psychiatric care (and many employers do not even provide this).
 
