@@ -1,4 +1,4 @@
-#### Transgender healthcare is an abject failure in America
+#### On (not) providing transgender people with healthcare
 
 ##### When I transitioned, I also transitioned careers.
 
