@@ -26,7 +26,7 @@ I understand that for someone who doesn’t actually require this treatment, thi
 
 Additionally, a curious and unfortunate side-effect of coming out transgender in America is you are essentially *required to have a therapist*. In order for me to change my gender marker on my driver’s license, I needed a doctor’s note (my psychologist). In order for me to change my gender marker on my passport, I needed a different note (my endocrinologist). In order to have gender confirming surgery (GCS), a person needs *two* notes (a physician and a psychiatrist), as well as to sit and be evaluated by a third person (usually a social worker but sometimes a psychologist or psychiatrist). This is to say that, even though the state will not actually *cover* my transgender-specific healthcare, they will *insist that I have it*, whether it’s cash out of pocket or insurance from some employer-looking vehicle.
 
-I have had a couple of surreal sessions with my psychologist about this; she will look at me and say, “So why are we here today, Jane?” And I will just reply that I don’t really know, that I am required to be there literally by law, and that we can just sort of chat and catch up and be some sort of awkward friends.
+I have had a couple of surreal sessions with my psychologist about this; she will look at me and say, “So why are we here today, Jane?” And I will just reply that I don’t really know, that I am required to be there by law, and that we can just sort of chat and catch up and be some sort of awkward friends.
 
 #####Hormones, surgeries, and this is expensive, right?
 
