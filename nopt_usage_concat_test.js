@@ -18,7 +18,7 @@ var nopt = require('nopt')
 		}
 	, shortHands = {
 			'a'          : [ '--column_a' ],
-			'b'          : [ '--column_a' ]
+			'ca'         : [ '--column_a' ]
 		}
 	, parsed = nopt(knownOpts, process.argv)
 	, usage = noptUsage(knownOpts, shortHands, description, defaults)
