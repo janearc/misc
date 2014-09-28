@@ -41,10 +41,6 @@
 		coords : [ 459, 437 ]
 	},
 	{
-		name : "rick puga",        // LF7
-		coords : [ 451, 510 ]
-	},
-	{
 		name : "dynasoar",         // LFD
 		coords : [ 483, 447 ]
 	},
