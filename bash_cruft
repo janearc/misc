@@ -18,6 +18,7 @@ alias olddrive="pushd $OF; open $OF"
 alias freq="history | cut -c8- | sort | uniq -c | sort -rn | head"
 alias perl=/usr/local/Cellar/perl518/5.18.0/bin/perl5.18.0
 alias perldoc=/usr/local/Cellar/perl518/5.18.0/bin/perldoc
+alias dit=git
 alias j=jobs
 alias f=fg
 alias gh=fg
