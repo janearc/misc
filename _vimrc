@@ -79,8 +79,11 @@ ab prnit print
 " perl macros i use
 ab ubp #!/usr/bin/perl
 ab u518 use v5.18;
-ab uws use warnings;
-use strict;
+ab uws use warnings;use strict;
+
+" js fail
+ab vst var
+
 
 " like :wq except write and suspend
 command Wst w <bar> st
