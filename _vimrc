@@ -5,7 +5,7 @@
 
 
 
-" jane is a perl tab fascist
+" jane is a tab fascist
 set ts=2 sts=2 noet
 set autoindent nocindent
 
@@ -81,15 +81,20 @@ ab ubp #!/usr/bin/perl
 ab u518 use v5.18;
 ab uws use warnings;use strict;
 
+" js fail
+ab vst var
+
+
 " like :wq except write and suspend
 command Wst w <bar> st
-cabbrev wst Wst 
+cabbrev wst Wst
+cabbrev wt st
 cabbrev Wq wq
 
 " i tag my files with my name, you should too
 ab mystamp # jane@cpan.org // vim:tw=80:ts=2:noet
 
-" lay out my files
+" lay out my files - you will want to `mkdir -p ~/.vim/{backup,tmp}`
 set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
@@ -105,6 +110,9 @@ map <F11> :set nopaste<CR>
 imap <F10> <C-O>:set paste<CR>
 imap <F11> <nop>
 set pastetoggle=<F11>
+
+" @18f's @cm suggested to fix markdown wrapping when i am listing:
+au FileType mkd set tw=0
 
 
 " i have more spelling typos in a specific file (english, vs code)
