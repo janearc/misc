@@ -57,6 +57,22 @@
 		coords : [ 18, 257 ]
 	},
 	{
+		name : "sparda",
+		coords : [ 404, 404 ]
+	},
+	{
+		name : "judas",
+		coords : [ 347, 296 ]
+	},
+	{
+		name : "tortuga tank",
+		coords : [ 142, 281 ]
+	},
+	{
+		name : "tpvr",
+		coords : [ 42, 283 ]
+	},
+	{
 		name : "amrxzy",
 		coords : [ 394, 133 ]
 	}
