@@ -73,6 +73,14 @@
 		coords : [ 42, 283 ]
 	},
 	{
+		name : "sven",
+		coords : [ 318, 447 ]
+	},
+	{
+		name : "xionthian",
+		coords : [ 313, 438 ]
+	},
+	{
 		name : "amrxzy",
 		coords : [ 394, 133 ]
 	}
