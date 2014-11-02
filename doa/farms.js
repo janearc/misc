@@ -81,6 +81,18 @@
 		coords : [ 313, 438 ]
 	},
 	{
+		name : "ruffneck",
+		coords : [ 167, 445 ]
+	},
+	{
+		name : "mzkittie",
+		coords : [ 169, 445 ]
+	},
+	{
+		name : "justin",
+		coords : [ 149, 455 ]
+	},
+	{
 		name : "amrxzy",
 		coords : [ 394, 133 ]
 	}
