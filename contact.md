@@ -18,7 +18,7 @@ roughly **9am and 6pm** my own time.
 * twitter: [avriette](https://twitter.com/avriette)
 * github: [avriette](https://github.com/avriette)
 * cpan: [jane](http://search.cpan.org/~jane/)
-* facebook: [jane.avriette.7](https://www.facebook.com/jane.avriette.7)
+* facebook: [jane avriette](https://www.facebook.com/janecodes)
 * wikipedia: [avriette](https://en.wikipedia.org/wiki/User:Avriette)
 * amazon: [A2STLT852H9K75](https://www.amazon.com/gp/pdp/profile/A2STLT852H9K75)
 * last.fm: [avriette](http://www.last.fm/user/avriette)
