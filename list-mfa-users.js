@@ -29,7 +29,7 @@ else if (process.env.GH_SECRET) {
 
 g.orgs.getMembers( {
 	org: '18F',
-	filter: ':2fa_disabled',
+	filter: '2fa_disabled',
 } , function (e, m) {
 		var results = [ ];
 		m.forEach( function (user) {
