@@ -1,20 +1,21 @@
 contact information, jane avriette
 ====
-I keep a phone number, 858-367-7293, which tries to be pointed at whatever  
-mechanism is the best way to reach me at the moment. This means I get SMS's,  
-voice mails, phone calls, and emails via that phone number.  
+I keep a phone number, 858-367-7293, which tries to be pointed at whatever
+mechanism is the best way to reach me at the moment. This means I get SMS&apos;s,
+voice mails, phone calls, and emails via that phone number.
 
-You may also email me at [jane@cpan.org](mailto:jane@cpan.org)  
+You may also email me at [jane@cpan.org](mailto:jane@cpan.org)
 
-In order of preference, I prefer communication via email, sms, instant  
-message, and lastly via phone or voice.  
+In order of preference, I prefer communication via email, sms, instant
+message, and lastly via phone or voice.
 
-With respect to communication, as I live in the Eastern/New_York time  
-zone, you can expect me to be paying attention to communications between  
+With respect to communication, as I live in the Eastern/New_York time
+zone, you can expect me to be paying attention to communications between
 roughly **9am and 6pm** my own time.
 
 * irc: [freenode](http://www.freenode.net/) or <a href="http://www.efnet.org/?module=servers">efnet</a>, authenticated (usually) as <i>jadne</i></li>
 * blogger: [deepthoughts.feminist.pw](http://deepthoughts.feminist.pw/)
+* medium: [avriette](https://medium.com/@avriette/)
 * twitter: [avriette](https://twitter.com/avriette)
 * github: [avriette](https://github.com/avriette)
 * cpan: [jane](http://search.cpan.org/~jane/)
