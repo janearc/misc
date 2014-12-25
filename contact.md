@@ -1,4 +1,4 @@
-contact information, jane avriette
+contact information, jane arc
 ====
 I keep a phone number, 858-367-7293, which tries to be pointed at whatever
 mechanism is the best way to reach me at the moment. This means I get SMS&apos;s,
@@ -17,9 +17,9 @@ roughly **9am and 6pm** my own time.
 * blogger: [deepthoughts.feminist.pw](http://deepthoughts.feminist.pw/)
 * medium: [avriette](https://medium.com/@avriette/)
 * twitter: [avriette](https://twitter.com/avriette)
-* github: [avriette](https://github.com/avriette)
+* github: [avriette](https://github.com/janearc)
 * cpan: [jane](http://search.cpan.org/~jane/)
-* facebook: [jane avriette](https://www.facebook.com/janecodes)
+* facebook: [jane arc](https://www.facebook.com/janecodes)
 * wikipedia: [avriette](https://en.wikipedia.org/wiki/User:Avriette)
 * amazon: [A2STLT852H9K75](https://www.amazon.com/gp/pdp/profile/A2STLT852H9K75)
 * last.fm: [avriette](http://www.last.fm/user/avriette)
