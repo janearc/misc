@@ -30,6 +30,10 @@ alias encrypt=encrypt_backend
 alias decrypt=decrypt_backend
 alias gpgvim=test_to_vim_stdin
 
+export GPG_TTY=`tty`
+eval $(gpg-agent --daemon --enable-ssh-support --write-env-file "${HOME}/.gpg-agent-info")
+
+
 # gpg operations
 encrypt_backend() {
 		echo "encrypting $1 to ${1}.gpg.asc..."
