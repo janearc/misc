@@ -11,7 +11,7 @@
   - Nissan VK56VD or VK45DE (V8&apos;s) or a VQ37HR / VR38DETT ($$$)
     - can an XJS mount a EZ36DE or EJ25?
   - what on earth does the bottom of this car look like
-    - check the draguar episode of roadkill
+    - check the [draguar episode of roadkill](https://www.youtube.com/watch?v=RQM2THiW1sE)
 
 engines:
   - M157 Turbo - ~$20k (will this even run sans mercedes ecu stuff?)
