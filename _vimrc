@@ -83,7 +83,7 @@ ab uws use warnings;use strict;
 
 " js fail
 ab vst var
-
+ab reutnr return
 
 " like :wq except write and suspend
 command Wst w <bar> st
