@@ -1,0 +1,15 @@
+[user]
+	email = jane@cpan.org
+	name = jane arc
+	signingkey = E0C78F19
+[push]
+	default = simple
+[commit]
+	gpgsign = true
+[alias]
+	ocmmit  = commit
+	comit   = commit
+	puh     = push
+	pus     = push
+	co      = checkout
+	brancjh = branch
