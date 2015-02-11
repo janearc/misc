@@ -13,3 +13,4 @@
 	pus     = push
 	co      = checkout
 	brancjh = branch
+	dif     = diff
