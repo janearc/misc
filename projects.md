@@ -13,6 +13,9 @@
   - what on earth does the bottom of this car look like
     - check the [draguar episode of roadkill](https://www.youtube.com/watch?v=RQM2THiW1sE)
 
+* 1987 Ford T-Bird Turbo Coupe
+  - Ford 302 Coyote & 6MT from 2012 Mustang 302
+
 engines:
   - M157 Turbo - ~$20k (will this even run sans mercedes ecu stuff?)
   - VR38DETT - ~$20k
@@ -22,3 +25,4 @@ engines:
   - VQ37HR - $4500-6000
   - EZ36 - $3500-5000
   - EJ25 - $4-6k
+  - Ford 302 - $6.5-11.5k
