@@ -85,6 +85,9 @@ ab uws use warnings;use strict;
 ab vst var
 ab reutnr return
 
+" pipe the selected text to gist
+cabbrev gist ,w !gist
+
 " like :wq except write and suspend
 command Wst w <bar> st
 cabbrev wst Wst
@@ -99,7 +102,7 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
-" typos 
+" typos
 cabbrev zsg zsh
 cabbrev bim vim
 cabbrev pate paste

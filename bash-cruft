@@ -24,6 +24,7 @@ alias j=jobs
 alias f=fg
 alias gh=fg
 alias fgfg=fg
+alias fggf=fg
 alias ppod=popd
 alias HEAD="curl -LIq"
 alias encrypt=encrypt_backend
