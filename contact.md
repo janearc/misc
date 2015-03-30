@@ -15,16 +15,13 @@ roughly **9am and 6pm** my own time.
 
 * irc: [freenode](http://www.freenode.net/) or <a href="http://www.efnet.org/?module=servers">efnet</a>, authenticated (usually) as <i>jadne</i></li>
 * blogger: [deepthoughts.feminist.pw](http://deepthoughts.feminist.pw/)
-* medium: [avriette](https://medium.com/@avriette/)
-* twitter: [avriette](https://twitter.com/avriette)
-* github: [avriette](https://github.com/janearc)
+* github: [janearc](https://github.com/janearc)
 * cpan: [jane](http://search.cpan.org/~jane/)
 * facebook: [jane arc](https://www.facebook.com/janecodes)
 * wikipedia: [avriette](https://en.wikipedia.org/wiki/User:Avriette)
 * amazon: [A2STLT852H9K75](https://www.amazon.com/gp/pdp/profile/A2STLT852H9K75)
 * last.fm: [avriette](http://www.last.fm/user/avriette)
 * stack exchange: [jane avriette](https://stackexchange.com/users/3475447/jane-avriette?tab=accounts)
-* jabber: janeavr@dukgo.com [I appreciate OTR, thanks]</li>
-* gnupg/pgp: [0x3166AA514B8EF964](http://pgp.mit.edu/pks/lookup?op=get&amp;search=0x3166AA514B8EF964) [see also](https://github.com/avriette/misc/tree/master/gnupg_pubkeys)
+* gnupg/pgp: [0x707D9DE8E2368037](http://pgp.mit.edu/pks/lookup?op=get&search=0x707D9DE8E2368037) [see also](https://github.com/janearc/misc/tree/master/gnupg_pubkeys)
 
-lovingly crafted in vi [7.4 (2013 Aug 10, compiled Mar 11 2014 11:53:33)]
+lovingly crafted in vi [7.4 (2013 Aug 10, compiled Aug 12 2014 04:42:40)]
