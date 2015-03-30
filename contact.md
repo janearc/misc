@@ -14,7 +14,6 @@ zone, you can expect me to be paying attention to communications between
 roughly **9am and 6pm** my own time.
 
 * irc: [freenode](http://www.freenode.net/) or <a href="http://www.efnet.org/?module=servers">efnet</a>, authenticated (usually) as <i>jadne</i></li>
-* blogger: [deepthoughts.feminist.pw](http://deepthoughts.feminist.pw/)
 * github: [janearc](https://github.com/janearc)
 * cpan: [jane](http://search.cpan.org/~jane/)
 * facebook: [jane arc](https://www.facebook.com/janecodes)
