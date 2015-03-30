@@ -21,6 +21,6 @@ roughly **9am and 6pm** my own time.
 * amazon: [A2STLT852H9K75](https://www.amazon.com/gp/pdp/profile/A2STLT852H9K75)
 * last.fm: [avriette](http://www.last.fm/user/avriette)
 * stack exchange: [jane avriette](https://stackexchange.com/users/3475447/jane-avriette?tab=accounts)
-* gnupg/pgp: [0x707D9DE8E2368037](http://pgp.mit.edu/pks/lookup?op=get&search=0x707D9DE8E2368037) [see also](https://github.com/janearc/misc/tree/master/gnupg_pubkeys)
+* gnupg/pgp: [0x707D9DE8E2368037](http://pgp.mit.edu/pks/lookup?op=get&search=0x707D9DE8E2368037) [see also](https://github.com/janearc/misc/tree/master/gnupg-pubkeys)
 
 lovingly crafted in vi [7.4 (2013 Aug 10, compiled Aug 12 2014 04:42:40)]
