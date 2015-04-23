@@ -47,3 +47,10 @@ decrypt_backend() {
 text_to_vim_stdin() {
 	decrypt_backend( $1 ) | fold -ws 78 | vim -
 }
+
+# useful for anti-idle loops
+function rsleep () {
+	R=`echo "scale=3; 100000 / $RANDOM" | bc | cut -d. -f 1`
+	echo -n "Sleeping ${R} seconds..."
+	sleep ${R}
+}
