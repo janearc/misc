@@ -24,6 +24,7 @@ alias j=jobs
 alias f=fg
 alias gh=fg
 alias fgfg=fg
+alias fgls=ls
 alias fggf=fg
 alias ppod=popd
 alias HEAD="curl -LIq"
