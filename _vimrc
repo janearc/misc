@@ -1,4 +1,4 @@
-" jane avriette's vimrc. i've been carrying this around since 2000 or so.
+" i've been carrying this around since 2000 or so.
 " i honestly don't remember all the places i ganked shit from.
 "
 " Jan 2014
@@ -8,6 +8,9 @@
 " jane is a tab fascist
 set ts=2 sts=2 noet
 set autoindent nocindent
+
+" window splitting in vim is endlessly, frustratingly, going to the wrong place. fix per @joshua
+set splitright splitbelow
 
 " line nos
 set number
@@ -95,7 +98,8 @@ cabbrev wt st
 cabbrev Wq wq
 
 " i tag my files with my name, you should too
-ab mystamp # jane@cpan.org // vim:tw=80:ts=2:noet
+ab mystamp // @janearc 🐙👾 // jane@cpan.org // vim: tw=80 ts=2 noet
+ab sstamp // 🐙👾  vim: tw=80 ts=2 noet
 
 " lay out my files - you will want to `mkdir -p ~/.vim/{backup,tmp}`
 set backup
