@@ -17,10 +17,10 @@ roughly **8am and 6pm** my own time.
 * github: [janearc](https://github.com/janearc)
 * cpan: [jane](http://search.cpan.org/~jane/)
 * facebook: [jane arc](https://www.facebook.com/janecodes)
-* [wikipedia]:(https://en.wikipedia.org/wiki/User:Avriette)
+* [wikipedia](https://en.wikipedia.org/wiki/User:Avriette)
 * amazon: [A2STLT852H9K75](https://www.amazon.com/gp/pdp/profile/A2STLT852H9K75)
 * [last.fm](http://www.last.fm/user/avriette)
-* [stack exchange]:(https://stackexchange.com/users/3475447/jane-avriette?tab=accounts)
+* [stack exchange](https://stackexchange.com/users/3475447/jane-avriette?tab=accounts)
 * gnupg/pgp: [0x707D9DE8E2368037](http://pgp.mit.edu/pks/lookup?op=get&search=0x707D9DE8E2368037) [see also](https://github.com/janearc/misc/tree/master/gnupg-pubkeys)
 
 names
