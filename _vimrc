@@ -1,4 +1,4 @@
-" jane avriette's vimrc. i've been carrying this around since 2000 or so.
+" jane arc's vimrc. i've been carrying this around since 2000 or so.
 " i honestly don't remember all the places i ganked shit from.
 "
 " Jan 2014
@@ -8,6 +8,9 @@
 " jane is a tab fascist
 set ts=2 sts=2 noet
 set autoindent nocindent
+
+" basically if you aren't using unix we can't be friends.
+set fileformat=unix
 
 " line nos
 set number
