@@ -17,15 +17,15 @@ roughly **8am and 6pm** my own time.
 * github: [janearc](https://github.com/janearc)
 * cpan: [jane](http://search.cpan.org/~jane/)
 * facebook: [jane arc](https://www.facebook.com/janecodes)
-* wikipedia: [avriette](https://en.wikipedia.org/wiki/User:Avriette)
+* [wikipedia]:(https://en.wikipedia.org/wiki/User:Avriette)
 * amazon: [A2STLT852H9K75](https://www.amazon.com/gp/pdp/profile/A2STLT852H9K75)
-* last.fm: [avriette](http://www.last.fm/user/avriette)
-* stack exchange: [jane avriette](https://stackexchange.com/users/3475447/jane-avriette?tab=accounts)
+* [last.fm](http://www.last.fm/user/avriette)
+* [stack exchange]:(https://stackexchange.com/users/3475447/jane-avriette?tab=accounts)
 * gnupg/pgp: [0x707D9DE8E2368037](http://pgp.mit.edu/pks/lookup?op=get&search=0x707D9DE8E2368037) [see also](https://github.com/janearc/misc/tree/master/gnupg-pubkeys)
 
 names
 - - -
-the person who authored this is ***jane arc***; there was a name change in early 2015 from jane ***avriette*** to jane ***arc***; the former is my married name. please refer to me as the latter. it takes time to go and change all these places your surname is used after a divorce, but i am getting around to all of them.
+the person who authored this is ***jane arc***;
 
 * *a word of unsolicited advice:* don&apos;t change your name when you get married.
 
