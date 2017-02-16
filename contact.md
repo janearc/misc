@@ -11,16 +11,11 @@ message, and lastly via phone or voice.
 
 With respect to communication, as I live in the America/Tijuana time
 zone, you can expect me to be paying attention to communications between
-roughly **8am and 6pm** my own time.
+roughly **7am and 6pm** my own time.
 
-* irc: [freenode](http://www.freenode.net/) or <a href="http://www.efnet.org/?module=servers">efnet</a>, authenticated (usually) as <i>jadne</i></li>
 * github: [janearc](https://github.com/janearc)
 * cpan: [jane](http://search.cpan.org/~jane/)
-* facebook: [jane arc](https://www.facebook.com/janecodes)
-* [wikipedia](https://en.wikipedia.org/wiki/User:Avriette)
 * amazon: [A2STLT852H9K75](https://www.amazon.com/gp/pdp/profile/A2STLT852H9K75)
-* [last.fm](http://www.last.fm/user/avriette)
-* [stack exchange](https://stackexchange.com/users/3475447/jane-avriette?tab=accounts)
 * gnupg/pgp: [0x707D9DE8E2368037](http://pgp.mit.edu/pks/lookup?op=get&search=0x707D9DE8E2368037) [see also](https://github.com/janearc/misc/tree/master/gnupg-pubkeys)
 
 names
@@ -29,6 +24,4 @@ the person who authored this is ***jane arc***;
 
 * *a word of unsolicited advice:* don&apos;t change your name when you get married.
 
-* *an unsolicited bit of software design advice:* if your software does not allow you to change the username of a user, the problem is *you.*
-
-lovingly crafted in vi [7.4 (2013 Aug 10, compiled Aug 12 2014 04:42:40)]
+lovingly crafted in vi [Vi IMproved 7.3 (2010 Aug 15, compiled Jun 14 2016 16:06:49)]
