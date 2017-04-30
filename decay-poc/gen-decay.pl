@@ -16,7 +16,7 @@ my $word_count = 0;
 
 my $W = WWW::Wikipedia->new( );
 
-# yeah, that's just, like, ymy *opinion*, man.
+# yeah, that's just, like, your *opinion*, man.
 my @escalations = qw{
 	long short brief difficult large heavy
 };
