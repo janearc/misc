@@ -22,6 +22,9 @@ set nohlsearch
 " dont be stupid when searching
 set ignorecase
 
+" window splitting in vim is endlessly, frustratingly, going to the wrong place. fix per @joshua
+set splitright splitbelow
+
 " this puts our search term in the middle of the screen
 nmap n nmzz.`z
 nmap N Nmzz.`z
@@ -74,7 +77,8 @@ ab prnit print
 " perl macros i use
 ab ubp #!/usr/bin/perl
 ab u518 use v5.18;
-ab uws use warnings;use strict;
+ab uws use warnings;
+use strict;
 
 " js fail
 ab vst var
