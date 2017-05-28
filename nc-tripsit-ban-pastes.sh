@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # nc_tripsit_ban_pastes.sh
-#  jane avriette, jane@cpan.org
+#  jane@cpan.org
 #  http://goo.gl/UMPoHO
 #
 # pull down all the ban_* factoids, check them for pastie/
