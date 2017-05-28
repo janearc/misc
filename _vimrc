@@ -1,19 +1,11 @@
-" i've been carrying this around since 2000 or so.
-" i honestly don't remember all the places i ganked shit from.
-"
-" Jan 2014
-
-
-
-" jane is a tab fascist
 set ts=2 sts=2 noet
 set autoindent nocindent
 
-" window splitting in vim is endlessly, frustratingly, going to the wrong place. fix per @joshua
-set splitright splitbelow
-
 " line nos
 set number
+
+" unix
+set fileformat=unix
 
 " show me where my cursor is
 set cursorline nocursorcolumn ruler
@@ -50,7 +42,7 @@ set backspace=indent,eol,start
 
 " less-lame wrap behavior
 set whichwrap+=<,>,h,l
- 
+
 " utf-8 plox
 set encoding=utf-8 fileencodings=
 
@@ -88,6 +80,9 @@ ab uws use warnings;use strict;
 ab vst var
 ab reutnr return
 
+" stupid yurope
+ab £ #
+
 " pipe the selected text to gist
 cabbrev gist ,w !gist
 
@@ -98,8 +93,8 @@ cabbrev wt st
 cabbrev Wq wq
 
 " i tag my files with my name, you should too
-ab mystamp // @janearc 🐙👾 // jane@cpan.org // vim: tw=80 ts=2 noet
-ab sstamp // 🐙👾  vim: tw=80 ts=2 noet
+ab mystamp // @janearc 🐙👾 // jane@cpan.org // vim:tw=80:ts=2:noet
+ab sstamp // 🐙👾  vim:tw=80:ts=2:noet
 
 " lay out my files - you will want to `mkdir -p ~/.vim/{backup,tmp}`
 set backup
@@ -122,5 +117,35 @@ set pastetoggle=<F11>
 au FileType mkd set tw=0
 
 
-" i have more spelling typos in a specific file (english, vs code)
-" source! "~/.vim/spelling.vim"
+" dem pathogenz
+set shell=bash
+call pathogen#infect()
+call pathogen#helptags()
+filetype plugin indent on
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"autocmd BufWritePre * :%s/\s\+$//e
+set viminfo='100,\"2500,:200,%,n~/.viminfo
+
+" go syntax, requires syntastic and pathogen
+let g:go_fmt_command = "goimports"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
+au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
+au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
+
+" lightline
+set laststatus=2
+
+" Tabular from joshua corbin
+nnoremap <leader>tt :Tab<cr>
+nnoremap <leader>t= :Tab/=/<cr>
+nnoremap <leader>t, :Tab/,/<cr>
+nnoremap <leader>t: :Tab/:/<cr>
+
+" there's a thrift syntax file here: https://raw.githubusercontent.com/apache/thrift/master/contrib/thrift.vim
