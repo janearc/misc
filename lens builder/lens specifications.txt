@@ -1,0 +1,21 @@
+lensmaker's formula:
+1/f = (n-1) [1/r1 - 1/r2 + ((n - 1)d)/n*r1*r2]
+
+f = focal length
+n = refractive index of the material
+r1 = radius of the near curvature (to light source)
+r2 = radius of the far curvature
+d = thickness of the lens (the distance between top and bottom)
+
+the refraction of light is dictated by its distance from the center of the
+lens. this means that light in the center of the lens goes straight through,
+and light going through the near-perimeter is the most refracted.
+
+importantly, refraction is equal given an equal radius. thus theoretically,
+this means there are an infinite number of points around a radius of a lens
+which will focus to the same focal length.
+
+refractive indices:
+
+pyrex: 1.470
+flint glass: 1.52
