@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thou Shall Not Covet thy Object's Internals</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 1.25rem 1.1rem 4rem;
+    color: #1a1a1a;
+    background: #fafafa;
+  }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 .25rem; }
+  .source { color: #777; font-size: .85rem; margin-bottom: 2rem; }
+  .post { margin: 0 0 1.75rem; }
+  .post header {
+    font-size: .85rem;
+    color: #555;
+    margin-bottom: .4rem;
+    padding-bottom: .3rem;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  .post header .who { font-weight: 600; color: #1a1a1a; }
+  .post header .lvl { color: #777; }
+  .post header .when { color: #999; }
+  /* threading: indent replies, with a left rule */
+  .lvl1 { margin-left: .9rem; padding-left: .9rem; border-left: 3px solid #e0e0e0; }
+  .lvl2 { margin-left: .9rem; padding-left: .9rem; border-left: 3px solid #e0e0e0; }
+  .lvl3 { margin-left: .9rem; padding-left: .9rem; border-left: 3px solid #e0e0e0; }
+  blockquote {
+    margin: .6rem 0; padding: .1rem .9rem;
+    border-left: 3px solid #cfcfcf; color: #555; font-style: italic;
+  }
+  pre {
+    background: #f0f0f0; border: 1px solid #e0e0e0; border-radius: 6px;
+    padding: .8rem; overflow-x: auto; font-size: .85rem; line-height: 1.45;
+  }
+  code { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: .9em; }
+  pre code { font-size: 1em; }
+  p { margin: .6rem 0; }
+  ol, ul { margin: .6rem 0; padding-left: 1.4rem; }
+  .sig { color: #888; font-size: .85rem; margin-top: .6rem; }
+  hr { border: none; border-top: 1px solid #e2e2e2; margin: 2rem 0; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #ddd; background: #161616; }
+    h1 { color: #fff; }
+    .post header { color: #aaa; border-color: #333; }
+    .post header .who { color: #fff; }
+    .lvl1, .lvl2, .lvl3 { border-color: #3a3a3a; }
+    blockquote { border-color: #444; color: #aaa; }
+    pre { background: #1f1f1f; border-color: #333; }
+    .post header .when { color: #777; }
+    hr, .source { border-color: #333; color: #888; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Thou Shall Not Covet thy Object's Internals</h1>
+<p class="source">Archived from PerlMonks &middot; Meditations &middot; node 75578</p>
+
+<article class="post">
+  <header><span class="who">Ovid</span> <span class="lvl">(Cardinal)</span> &middot; <span class="when">Apr 25, 2001 at 23:36 UTC</span></header>
+  <p>We've heard it time and time again: messing with the internal data that an object carries around with it voids the warranty, isn't guaranteed to work and makes your milk go sour. Objects have interfaces and <em>that's</em> how you use them. Period. Don't mess with the internals unless you really, really know what you are doing and why. Then, if you do, still don't mess with them. If the object doesn't do what you want, write a new method. Better yet, write a package that inherits from that object and has the methods. Tell the boss it can't be done if you have to. Just don't mess with those darned internals!</p>
+  <p>I told him not to do it. I told him he was gaining short-term pleasure at the expense of long-term pain (I realize that I make myself seem so wise in my posts -- what a crock). My ex-boss (he since quit :), who only started using CGI.pm after it became painfully apparent that his hand-rolled version wasn't cutting it, decided that he needed to access the internals of the CGI object to do some "deep" file handling voodoo. I don't know which programs he did this to or how extensive the damage was.</p>
+  <p>Current scenario: tight deadline to upload a series of scripts that I have written to handle press releases being managed on a company's Web site. The owner promised it would be working today. I uploaded the scripts and they all died a horrible death. Seems I was using a much newer version of CGI.pm than we have on the production server. Can we upgrade safely? Dunno. I've backed up all of the files and in about 1/2 hour, I push the button to install the new version of the CGI module and hopefully my stuff will then run.</p>
+  <p>I don't have enough time to rewrite my code. No one else here knows exactly where the previous boss put his CGI-diddling code, we just know it's out there. He was bragging about it. Now we're on pins and needles because a large client is demanding my programs, but if I get them running, who knows what else will break?</p>
+  <p>How could we have avoided all of this "will it break" stress? Reread the title.</p>
+  <p>Until next time!</p>
+  <p>Cheers,<br>Ovid</p>
+  <p class="sig">Join the Perlmonks Setiathome Group or just click on the the link and check out our stats.<br>This node brought to you by the letter 'F'. (If you have to ask, don't)</p>
+</article>
+
+<hr>
+
+<article class="post">
+  <header><span class="who">dws</span> <span class="lvl">(Chancellor)</span> &middot; <span class="when">Apr 25, 2001 at 23:51 UTC</span></header>
+  <p><em>Objects have interfaces and</em> that's <em>how you use them.</em></p>
+  <p>Hence the old object saying:</p>
+  <blockquote>You can pick your friends,<br>And you can pick your privates,<br>But you shouldn't pick your friends' privates.</blockquote>
+</article>
+
+<article class="post">
+  <header><span class="who">Sherlock</span> <span class="lvl">(Deacon)</span> &middot; <span class="when">Apr 26, 2001 at 08:30 UTC</span></header>
+  <p>As a firm believer in object-oriented programming, I feel that this is an excellent post. The idea is that you create a module to encapsulate some piece of data and then "hide it" from the user of that module. That module will then be able to maintain and modify that data as per your request through the use of its interface.</p>
+  <p>I like to think of it this way:</p>
+  <p>Imagine you go to a bakery and there are three doughnuts and you'd like to take two. You have two options:</p>
+  <ol>
+    <li>Reach into the display, grab two, and run. (Praying that the baker doesn't have a gun and a military background...)</li>
+    <li>Ask the baker politely for the two doughnuts.</li>
+  </ol>
+  <p>The results are much as you'd expect, if you simply grab the doughnuts and run, the baker might lose track of how many doughnuts he was supposed to have...or did have..or will have...or...or...and just shoot himself. Of course, if you ask the baker politely, he can calmly give you the two doughnuts, modify his internal counter, and go on with his baking-filled life.</p>
+  <p>In case you haven't figured it out yet, this sad attempt at an allgory depicts a module (the baker) and a user (you). You can either use the module's interface and ask nicely for what you want, or you can just grab it on your own and pray that the module doesn't crumble before you. Messing with data that's "hidden" is only asking for trouble - just like what Ovid ran into. After all, the data must be hidden for a reason.</p>
+  <p>If the baker doesn't understand your questions (doesn't have the proper interface), you'll just have to build a better baker. ;-)</p>
+  <p>I sure do hope my ramblings make sense to someone...</p>
+  <p>- Sherlock</p>
+</article>
+
+<article class="post">
+  <header><span class="who">princepawn</span> <span class="lvl">(Parson)</span> &middot; <span class="when">Apr 26, 2001 at 01:31 UTC</span></header>
+  <p>I was asked to expand on my comments about ties as being good ways of hiding an object's implementation. I will use Tie::Cycle.</p>
+  <p>here is a normal usage of this module:</p>
+  <pre><code>use Tie::Cycle;
+
+tie my $cycle, 'Tie::Cycle', [ qw( FFFFFF 000000 FFFF00 ) ];
+
+print $cycle; # FFFFFF
+print $cycle; # 000000
+print $cycle; # FFFF00
+print $cycle; # FFFFFF  back to the beginning</code></pre>
+  <p>From the standpoint of a person who is used to getting at object internals, he has no hope here. In fact, higher management could install the Tie::Cycle module, and the programmers would be free to use the module, making use of normal Perl syntax but with Tie::Cycle semantics.</p>
+  <p>But in no case could they use their tied scalar to access their "object" in this case, <code>$cycle</code>.</p>
+  <p>It's funny that I wrote this post, because I used to hate Perl ties. My way of describing them was:</p>
+  <blockquote>They take a perfectly obvious piece of Perl code and make it so you have no idea what it might do anymore.</blockquote>
+  <p>But after reading Ovid's post, I guess I have to say</p>
+  <blockquote>They take a Perl module whose privates might have been violated using OOP availability and allow Perl to do the <code>FETCH</code>ing and <code>STORE</code>ing for the programmer, with a large variety of available semantics.</blockquote>
+</article>
+
+<div class="lvl1">
+<article class="post">
+  <header><span class="who">tye</span> <span class="lvl">(Sage)</span> &middot; <span class="when">Apr 26, 2001 at 02:33 UTC</span></header>
+  <p>To truely protect your object internals, you need to use closures.</p>
+  <p><strong>Update:</strong> Note that I find doing such to be not only overkill but a bad idea in Perl (except perhaps within large Perl projects where the temptation to peek at another class's implementation, <em>your</em> motivation to protect other team members from themselves, and the interdependence of classes may all be higher). And with new modules for getting at lexicals other than your own, the extra 'protection' provided now isn't much anyway.</p>
+  <p class="sig">- tye (but my friends call me "Tye")</p>
+</article>
+
+<article class="post">
+  <header><span class="who">merlyn</span> <span class="lvl">(Sage)</span> &middot; <span class="when">Apr 26, 2001 at 01:55 UTC</span></header>
+  <blockquote><em>But in no case could they use their tied scalar to access their "object" in this case, $cycle.</em></blockquote>
+  <p>Wrong. See <code>perldoc -f tied</code>.</p>
+  <p class="sig">-- Randal L. Schwartz, Perl hacker</p>
+</article>
+
+<article class="post">
+  <header><span class="who">hdp</span> <span class="lvl">(Beadle)</span> &middot; <span class="when">Apr 26, 2001 at 01:57 UTC</span></header>
+  <p>You seem to be forgetting <code>tied</code>.</p>
+  <p class="sig">hdp.</p>
+</article>
+
+<article class="post">
+  <header><span class="who">brian_d_foy</span> <span class="lvl">(Abbot)</span> &middot; <span class="when">Jan 16, 2006 at 04:19 UTC</span></header>
+  <p>You forgot the next line in the synopsis for Tie::Cycle, which shows you how to get to the underlying object. I supplied other methods besides those for the tie interface.</p>
+  <pre><code>(tied $cycle)-&gt;reset;  # back to the beginning</code></pre>
+  <p>Farther down in the docs I list a couple other object methods you can use.</p>
+  <p class="sig">-- brian d foy &lt;brian@stonehenge.com&gt; &middot; Subscribe to The Perl Review</p>
+</article>
+</div>
+
+<article class="post">
+  <header><span class="who">princepawn</span> <span class="lvl">(Parson)</span> &middot; <span class="when">Apr 25, 2001 at 23:39 UTC</span></header>
+  <p>This why Perl ties are so nice. All you can do is use normal Perl data structrures --- the getting and setting of the actual fields in necessarily hidden.</p>
+</article>
+
+<div class="lvl1">
+<article class="post">
+  <header><span class="who">brian_d_foy</span> <span class="lvl">(Abbot)</span> &middot; <span class="when">Jan 16, 2006 at 04:15 UTC</span></header>
+  <p>Perl ties don't prevent you from accessing the object data. You can get the object back with <code>tied</code>, or say the return value from <code>tie</code>.</p>
+  <pre><code>my $object = tie my $scalar, 'Tie::Scalar::SomethingCool';
+my $object2 = tied( $scalar );</code></pre>
+  <p>Of course, people have to do a little more work to do that, but the people that want to mess with your internals won't mind the work.</p>
+  <p class="sig">-- brian d foy &lt;brian@stonehenge.com&gt; &middot; Subscribe to The Perl Review</p>
+</article>
+</div>
+
+<article class="post">
+  <header><span class="who">Anonymous Monk</span> &middot; <span class="when">Apr 26, 2001 at 01:02 UTC</span></header>
+  <p>Isn't accessing the inside of an object faster than calling methods on it?</p>
+</article>
+
+<div class="lvl1">
+<article class="post">
+  <header><span class="who">turnstep</span> <span class="lvl">(Parson)</span> &middot; <span class="when">Apr 26, 2001 at 01:04 UTC</span></header>
+  <p>Yes, in the same way that leaving through the nearest wall is "faster" than using the door. :)</p>
+</article>
+
+<div class="lvl2">
+<article class="post">
+  <header><span class="who">Lexicon</span> <span class="lvl">(Chaplain)</span> &middot; <span class="when">Apr 26, 2001 at 05:46 UTC</span></header>
+  <p>Perl is like the Japanese Culture of languages. All the walls are built of paper, so you can peer in and get an idea of the shape of things.</p>
+  <p>Unfortuantly, paper tears easily.</p>
+  <p>And then you discover what you thought were the Emperor's concubines were actually a hoard of samurai. Oops.</p>
+  <p class="sig">-Lexicon</p>
+</article>
+
+<article class="post">
+  <header><span class="who">merlyn</span> <span class="lvl">(Sage)</span> &middot; <span class="when">Apr 26, 2001 at 01:53 UTC</span></header>
+  <p>Or coding in assembly is faster than using a high-level language.</p>
+  <p class="sig">-- Randal L. Schwartz, Perl hacker</p>
+</article>
+</div>
+</div>
+
+<article class="post">
+  <header><span class="who">jdhedden</span> <span class="lvl">(Deacon)</span> &middot; <span class="when">Jan 16, 2006 at 00:27 UTC</span></header>
+  <p>This is another example of why inside-out objects are so nice: You can't 'covet' their internals.</p>
+  <p class="sig">Remember: There's always one more bug.</p>
+</article>
+
+<div class="lvl1">
+<article class="post">
+  <header><span class="who">dragonchild</span> <span class="lvl">(Archbishop)</span> &middot; <span class="when">Jan 16, 2006 at 15:42 UTC</span></header>
+  <p>I believe what AnonyMonk was saying is that modules like Padwalker allow you to do nasty things.</p>
+  <p>Basically, the rule is Perl will never prevent you from doing something. It's just that you should be aware of the consequences if you end up using things like Padwalker or B::Generate to do what you want.</p>
+  <p class="sig">My criteria for good software:</p>
+  <ol>
+    <li>Does it work?</li>
+    <li>Can someone else come in, make a change, and be reasonably certain no bugs were introduced?</li>
+  </ol>
+</article>
+
+<article class="post">
+  <header><span class="who">Anonymous Monk</span> &middot; <span class="when">Jan 16, 2006 at 03:03 UTC</span></header>
+  <p>Sure you can :)</p>
+</article>
+</div>
+
+</body>
+</html>
